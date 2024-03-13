@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title text-align: center;>註冊並登入本網站</title>
+    <style>
+        body{
+            background-color:#b9d9ff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1{
+            text-align: center;
+            color: #2d0055; /* 紫色 */
+        }
+        p{
+            text-align: center;
+            color: #2d0055; /* 紫色 */
+        }
+    </style>
+</head>
+<body>
+    <h1 class="container">註冊</h1><br>
+    <p class="container">註冊並使用本網站的功能</p><br>
+    <form action="/action_page.php" class="container">
+        <ui>
+            <p>
+                電子郵件:<input type="email" placeholder="kugel@gmail.com"></p>
+            <p>
+                帳號:<input type="text" placeholder="帳號"></p>
+            <p>
+                密碼:<input type="password" placeholder="請選用高強度密碼鎖住自己"></p>
+            <p>
+                電話:<input type="tel" placeholder="+886-00 000 000"></p>
+            <p>
+                輸入關於您的基本資訊以在此獲得更好的體驗</p>
+            <p>
+                姓:<input type="text" placeholder="姓"></p>
+            <p>
+                名:<input type="text" placeholder="名"></p>
+            <p>
+                性別:
+                <input type="radio" value="m">
+                <label for="m">男</label>
+                <input type="radio" value="w">
+                <label for="w">女</label>
+                <input type="radio" value="o">
+                <label for="o">其他</label></p>
+            <p>
+                生日:<input type="date"></p>
+            <p>
+                喜歡的顏色:<input type="color"></p>
+            <p>
+                血型:<select>
+                    <option>A型</option>
+                    <option>B型</option>
+                    <option>AB型</option>
+                    <option>O型</option>
+                </select></p>
+            <p>
+                訂閱:
+                <input type="checkbox">メジロマックイーン
+                <input type="checkbox">ヨルシカ
+                <input type="checkbox">Hachi
+                <input type="checkbox">星街すいせい
+            </p>
+            <p>
+                附件:<input type="file"></p>
+            <p>
+                自我介紹:<input type="area"></p>
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+        </ui>
+    </form>
+</body>
