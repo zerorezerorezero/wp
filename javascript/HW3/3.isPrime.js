@@ -8,4 +8,4 @@ function isPrime(n){
     if(d==0)console.log(n," is not a prime number.");
     if(d==1)console.log(n," is a prime number.");
 }
-isPrime(15);
+isPrime(13);
