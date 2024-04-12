@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<html>
+    <head>
+        <style>
+            body{
+                background-color: aliceblue;
+            }
+            h1{
+                color: darkslateblue;
+            }
+            h2{
+                text-align: center;
+                color: midnightblue;
+            }
+            p{
+                color: blueviolet;
+            }
+            *{
+                
+                margin: 0;
+                padding: 0;
+            }
+            div{
+                height: 100vh;
+                width: 50px;
+                background: lightskyblue;
+                box-shadow:10px 10px darkorchid;
+                transition: 1s;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Hello world</h2>
+        <h1>Hi</h1>
+        <h2><img src="C:\Users\zero1\OneDrive\文件\網頁\wp\html\麥昆牆(2).png" alt="Mejiro McQueen" width="600" height="250"></h2>
+        <div id="sidebar" onclick="tran()">
+            <p><a href="file:///C:/Users/zero1/OneDrive/文件/網頁/wp/html/ChatGPTselfIntroduction.html">The 自我介紹</a></p>
+            <p><a href="file:///C:/Users/zero1/OneDrive/文件/網頁/wp/html/loginpage.html">Die 註冊頁面</a></p>
+        </div>
+        <script>
+            let mode=0;
+            let sideBar=document.querySelector('#sidebar');
+            function tran(){
+                if(mode==0){
+                    mode=1;
+                    sidebar.style.width="200px";
+                }
+                else{
+                    mode=0;
+                    sidebar.style.width="50px";
+                }
+            }
+        </script>
+    </body>
+</html>
