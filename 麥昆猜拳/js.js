@@ -1,81 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh-TW"></html>
-<title>目白麥昆猜拳</title>
-<body>
-    <style>
-        body{
-            background-color: aliceblue;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-        .purp{
-            text-align: center;
-            color: blueviolet;
-        }
-        .blue{
-            text-align: center;
-            color: lightskyblue;
-        }
-        .vert-stack{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .vert-stack div{
-            margin: 3px;
-        }
-        .hori-stack{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-        .hori-stack div{
-            margin: 3px;
-        }
-        button{
-            justify-content: space-between;
-            margin-right: 10px;
-            margin-left: 10px;
-            background-color: azure;
-            font-style: italic;
-            color: blueviolet;
-            border: 2px solid blueviolet;
-            border-radius: 5px;
-            width: 70px;
-            align-items: center;
-        }
-        button:hover{
-            background-color: darkslateblue;
-            color: azure;
-        }
-    </style>
-    <head>
-        <h1 class="purp" id="title">你是目白麥昆[漣漪窈窕淑女]，打敗目白麥昆[空之盡頭]即獲勝。(先取得10分)</h1>
-    </head>
-    <div class="vert-stack">
-        <div class="hori-stack">
-            <div class="vert-stack">
-                <h1 class="blue">CPU</h1>
-                <img src="Q.png" id="CPic" alt="Mejiro McQueen" height="400" width="700">
-                <h1 class="blue" id="CS">0</h1>
-            </div>
-            <div class="vert-stack">
-                <h1 class="purp">Player</h1>
-                <img src="Q.png" id="PPic" alt="Mejiro McQueen" height="400" width="700">
-                <h1 class="purp" id="PS">0</h1>
-            </div>
-        </div>
-        <div class="hori-stack">
-            <button id="Scissors" onclick="c(this)">Scissors</button>
-            <button id="Rock" onclick="c(this)">Rock</button>
-            <button id="Paper" onclick="c(this)">Paper</button>
-        </div>
-        <div class="vert-stack">
-            <button onclick="reset()">Reset</button>
-        </div>
-    </div>
-    <script scr="js.js"></script>
-    <script>
-        var goal=10;
+var goal=10;
         var Pscore=0;
         var Cscore=0;
         var Ps=document.getElementById("PS");
@@ -173,5 +96,4 @@
             BR.disabled=false;
             BP.disabled=false;
         }
-    </script>
-</body>
+
