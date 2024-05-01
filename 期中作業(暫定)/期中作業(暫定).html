@@ -83,7 +83,7 @@
         var PP=document.getElementById("PPic");
         var CP=document.getElementById("CPic");
 
-        async function c(evn){
+        function c(evn){
             var button =evn.id;
             var CPU=0;
             var PLR=0;
@@ -131,13 +131,12 @@
             }
         }
 
-        async function PicSet(p,c){
-
+        function PicSet(p,c){
             switch (p){
                 case 0: 
                     PP.src="SS.png";break;
                 case 1:
-                    PP.src="SR.png";break
+                    PP.src="SR.png";break;
                 case 2:
                     PP.src="SP.png";break;
             }
@@ -146,7 +145,7 @@
                 case 0: 
                     CP.src="WS.png";break;
                 case 1:
-                    CP.src="WR.png";break
+                    CP.src="WR.png";break;
                 case 2:
                     CP.src="WP.png";break;
             }
