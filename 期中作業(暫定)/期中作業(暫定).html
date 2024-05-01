@@ -21,7 +21,7 @@
             align-items: center;
         }
         .vert-stack div{
-            margin: 10px;
+            margin: 5px;
         }
         .hori-stack{
             display: flex;
@@ -29,23 +29,139 @@
             align-items: center;
         }
         .hori-stack div{
-            margin: 10px;
+            margin: 5px;
+        }
+        button{
+            justify-content: space-between;
+            margin-right: 20px;
+            margin-left: 10px;
+            background-color: azure;
+            font-style: italic;
+            color: blueviolet;
+            border: 2px solid blueviolet;
+            border-radius: 5px;
+            width: 70px;
+            align-items: center;
+        }
+        button:hover{
+            background-color: darkslateblue;
+            color: azure;
         }
     </style>
     <head>
-        <h1 class="purp">你是目白麥昆[漣漪窈窕淑女]，打敗目白麥昆[空之盡頭]即獲勝</h1>
+        <h1 class="purp" id="title">你是目白麥昆[漣漪窈窕淑女]，打敗目白麥昆[空之盡頭]即獲勝。(取得20分)</h1>
     </head>
     <div class="vert-stack">
         <div class="hori-stack">
             <div class="vert-stack">
                 <h1 class="blue">CPU</h1>
-                <img src="Q.png" alt="Mejiro McQueen" height="400" width="700">
+                <img src="Q.png" id="CPic" alt="Mejiro McQueen" height="400" width="700">
+                <h1 class="blue" id="CS">0</h1>
             </div>
             <div class="vert-stack">
                 <h1 class="purp">Player</h1>
-                <img src="Q.png" alt="Mejiro McQueen" height="400" width="700">
+                <img src="Q.png" id="PPic" alt="Mejiro McQueen" height="400" width="700">
+                <h1 class="purp" id="PS">0</h1>
             </div>
-            <button name="Scissors" ></button>
+        </div>
+        <div class="hori-stack">
+            <button id="Scissors" onclick="c(this)">Scissors</button>
+            <button id="Rock" onclick="c(this)">Rock</button>
+            <button id="Paper" onclick="c(this)">Paper</button>
+        </div>
+        <div class="vert-stack">
+            <button onclick="reset()">Reset</button>
         </div>
     </div>
+    <script scr="js.js"></script>
+    <script>
+        var goal=10;
+        var Pscore=0;
+        var Cscore=0;
+        var Ps=document.getElementById("PS");
+        var Cs=document.getElementById("CS");
+        var PP=document.getElementById("PPic");
+        var CP=document.getElementById("CPic");
+
+        async function c(evn){
+            var button =evn.id;
+            var CPU=0;
+            var PLR=0;
+
+            switch (button){
+                case "Scissors":
+                    PLR=0; break;
+                case "Rock":
+                    PLR=1; break;
+                case "Paper":
+                    PLR=2; break;
+            }
+
+            CPU=Math.floor(Math.random()*3);
+
+            PicSet(PLR,CPU);
+
+            var title=document.getElementById("title");
+            if(CPU==PLR){
+                title.innerText="平手";
+            }
+            else if(PLR-CPU==1||PLR-CPU==-2){
+                title.innerText="勝";
+                Pscore++;
+            }
+            else {
+                title.innerText="敗";
+                Cscore++;
+            }
+
+            Ps.innerText=Pscore.toString();
+            Cs.innerText=Cscore.toString();
+
+            if(Pscore==goal||Cscore==goal){
+                if(Pscore>Cscore){
+                    title.innerText="你贏了!"
+                    PP.src="SQwin.png";
+                    CP.src="WQlose.png";
+                }
+                else {
+                    title.innerText="你輸了......"
+                    PP.src="SQlose.png";
+                    CP.src="WQwin.png";
+                }
+            }
+        }
+
+        async function PicSet(p,c){
+
+            switch (p){
+                case 0: 
+                    PP.src="SS.png";break;
+                case 1:
+                    PP.src="SR.png";break
+                case 2:
+                    PP.src="SP.png";break;
+            }
+
+            switch (c){
+                case 0: 
+                    CP.src="WS.png";break;
+                case 1:
+                    CP.src="WR.png";break
+                case 2:
+                    CP.src="WP.png";break;
+            }
+        }
+
+        function reset(){
+            title.innerText="你是目白麥昆[漣漪窈窕淑女]，打敗目白麥昆[空之盡頭]即獲勝。(取得20分)";
+            CPU=0;
+            PLR=0;
+            Pscore=0;
+            Cscore=0;
+            Ps.innerText=Pscore.toString();
+            Cs.innerText=Cscore.toString();
+            PP.src="Q.png";
+            CP.src="Q.png";
+        }
+    </script>
 </body>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <button onclick="bigger()">Kugel</button>
+        <script>
+            var position='absolute';
+            var left=100;
+            var top1=100;
+            var height=100;
+            var width=100;
+
+            let b=document.querySelector('button');
+            b.style=`position:${position}; left:${left}px; top:${top1}px; height:${height}px; width:${width}px`;
+
+            function bigger(){
+                if(width<600&&height<600){
+                    width+=50;
+                    height+=50;
+                    b.style=`position:${position}; left:${left}px; top:${top1}px; height:${height}px; width:${width}px`;
+                }
+                
+            }
+
+        </script>
+    </body>
+</html>
