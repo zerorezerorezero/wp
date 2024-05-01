@@ -82,6 +82,9 @@
         var Cs=document.getElementById("CS");
         var PP=document.getElementById("PPic");
         var CP=document.getElementById("CPic");
+        var BS=document.getElementById("Scissors");
+        var BR=document.getElementById("Rock");
+        var BP=document.getElementById("Paper");
 
         function c(evn){
             var button =evn.id;
@@ -122,12 +125,17 @@
                     title.innerText="你贏了!"
                     PP.src="SQwin.png";
                     CP.src="WQlose.png";
+
                 }
                 else {
                     title.innerText="你輸了......"
                     PP.src="SQlose.png";
                     CP.src="WQwin.png";
                 }
+
+                BS.disabled=true;
+                BR.disabled=true;
+                BP.disabled=true;
             }
         }
 
@@ -161,6 +169,9 @@
             Cs.innerText=Cscore.toString();
             PP.src="Q.png";
             CP.src="Q.png";
+            BS.disabled=false;
+            BR.disabled=false;
+            BP.disabled=false;
         }
     </script>
 </body>
