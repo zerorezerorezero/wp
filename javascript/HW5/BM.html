@@ -1,6 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        
+    <head>
+        <style>
+            button{
+                border-radius: 20px ;
+                position: absolute;
+                width: 150px;
+                height: 50;
+                border: 0px;
+                color: blueviolet;
+                background-color: aliceblue;
+            }
+        </style>
+    </head>
+    <body onload="move()">
+        <button name="btn">我過來了我又過去了</button>
+        <script>
+            let b=document.querySelector("[name=btn]")
+            b.style.position='absolute'
+            var x=10
+            var y=10
+            var xctrl=true
+            var yctrl=true
+
+            function move(){
+                if(x>1300){
+                    xctrl=false
+                }
+                else if(x<20){
+                    xctrl=true
+                }
+                if(y>700){
+                    yctrl=false
+                }
+                else if(y<20){
+                    yctrl=true
+                }
+
+                if(xctrl){
+                    x++
+                }
+                else{
+                    x--
+                }
+                if(yctrl){
+                    y++
+                }
+                else{
+                    y--
+                }
+                
+                b.style.left=x +'px'
+                b.style.top=y +'px'
+                setTimeout(move,1)
+            }
+            move
+        </script>
     </body>
 </html>
