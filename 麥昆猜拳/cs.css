@@ -1,0 +1,44 @@
+body{
+    background-color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.purp{
+    text-align: center;
+    color: blueviolet;
+}
+.blue{
+    text-align: center;
+    color: lightskyblue;
+}
+.vert-stack{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.vert-stack div{
+    margin: 3px;
+}
+.hori-stack{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.hori-stack div{
+    margin: 3px;
+}
+button{
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: azure;
+    font-style: italic;
+    color: blueviolet;
+    border: 2px solid blueviolet;
+    border-radius: 5px;
+    width: 70px;
+    align-items: center;
+}
+button:hover{
+    background-color: darkslateblue;
+    color: azure;
+}
