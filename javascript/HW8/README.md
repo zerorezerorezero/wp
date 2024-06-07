@@ -1,0 +1,2 @@
+# 關於本作業
+html基本上是自己打的，排版參考自W3School，看到ChatGPT給的架構後，有小修改巢狀結構。css主要參考自W3School還有ChatGPT進行debug。js則是直接複製自ChatGPT。
