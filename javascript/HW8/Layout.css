@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-image: url('MQ.png');
+}
+.header{
+    padding: 20px;
+    text-align: center;
+    color: mediumpurple;
+}
+.navbar{
+    height:fit-content;
+    background-color: blueviolet;
+    opacity: 0.5;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    font-size: 30px;
+}
+.navbar-content{
+    display: flex;
+    align-items: center;
+}
+.navbar a{
+    display: inline-block;
+    background-color: darkorchid;
+    color: aliceblue;
+    text-align: center;
+    text-decoration: none;
+}
+.navbar a:hover{
+    background-color: aliceblue;
+    color: blueviolet;
+}
+.navbar #toggleButton {
+    border: none;
+    background-color: darkorchid;
+    color: aliceblue;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 30px;
+}
+.navbar #togggleButton a{
+    background-color: aliceblue;
+    color: blueviolet;
+}
+.navbar #toggleButton:hover{
+    background-color: aliceblue;
+    color: blueviolet;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: darkorchid;
+    box-shadow: 0px 8px 16px 0px blueviolet;
+    list-style-type: none;
+    height: 70px;
+    width: 100;
+    z-index: 1;
+    top: 50px;
+    font-size: 30px;
+    min-width: 150px;
+    left: 150px;
+}
+.dropdown-content a{
+    background-color: darkorchid;
+    color: aliceblue;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content :hover{
+    background-color: aliceblue;
+    color: blueviolet;
+}
+.column {
+    float: left;
+    padding: 10px;
+    height: 600px;
+    color:azure;
+}
+.column.side {
+    background-color: blueviolet;
+    opacity: 60%;
+    width: 25%;
+}
+.column.middle {
+    text-align: center;
+    color: blue;
+    width: 50%;
+}
+.column a{
+    text-decoration: none;
+}
+.column a:hover{
+    background-color: aliceblue;
+    color: blueviolet;
+}
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) { 
+    .column.side, .column.middle {
+      width: 100%;
+    }
+  }
