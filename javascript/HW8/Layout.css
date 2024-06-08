@@ -12,8 +12,8 @@ body{
 }
 .navbar{
     height:fit-content;
-    background-color: blueviolet;
-    opacity: 0.5;
+    background-color: darkorchid;
+    opacity: 0.8;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -31,6 +31,7 @@ body{
     color: aliceblue;
     text-align: center;
     text-decoration: none;
+    margin-right: 5px;
 }
 .navbar a:hover{
     background-color: aliceblue;
@@ -79,25 +80,35 @@ body{
 .column {
     float: left;
     padding: 10px;
-    height: 600px;
+    height: 900px;
     color:azure;
 }
 .column.side {
     background-color: blueviolet;
-    opacity: 60%;
+    opacity: 0.8;
     width: 25%;
 }
 .column.middle {
+    background-color: aliceblue;
+    opacity: 70%;
+    color: blueviolet;
     text-align: center;
-    color: blue;
     width: 50%;
 }
+.column.middle h2{
+    color: blue;
+}
 .column a{
+    color:lightblue;
     text-decoration: none;
 }
 .column a:hover{
     background-color: aliceblue;
     color: blueviolet;
+}
+.column a.no-hover:hover{
+    background-color: blueviolet;
+    color: aliceblue;
 }
 .row::after {
     content: "";
