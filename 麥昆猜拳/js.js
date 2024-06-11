@@ -1,5 +1,5 @@
 // Declaring variables
-let goal=10;
+let goal=5;
 let Pscore=0;
 let Cscore=0;
 let Ps=document.getElementById("PS");
@@ -51,7 +51,7 @@ function PicSet(p,c){ // Setting pictures
 }
 
 function reset(){ // Reset everything
-    title.innerText="你是目白麥昆[漣漪窈窕淑女]，打敗目白麥昆[空之盡頭]即獲勝。(先取得10分)";
+    title.innerText="你是目白麥昆[漣漪窈窕淑女]，打敗目白麥昆[空之盡頭]即獲勝。(先取得5分)";
     CPU=0;
     PLR=0;
     Pscore=0;
@@ -101,20 +101,22 @@ function R(){ // Show result
     BReset.disabled=false;
 
     if(Pscore==goal||Cscore==goal){
-        if(Pscore>Cscore){
-            title.innerText="你贏了!"
-            PP.src="SQwin.png";
-            CP.src="WQlose.png";
-        }
-        else {
-            title.innerText="你輸了......"
-            PP.src="SQlose.png";
-            CP.src="WQwin.png";
-        }
-
-        BS.disabled=true;
-        BR.disabled=true;
-        BP.disabled=true;
+        BS.disabled = true;
+        BR.disabled = true;
+        BP.disabled = true;
+        setTimeout(judge,3000);
     }
 }
 
+function judge() {
+    if (Pscore > Cscore) {
+        title.innerText = "你贏了!";
+        PP.src = "SQwin.png";
+        CP.src = "WQlose.png";
+    }
+    else {
+        title.innerText = "你輸了......";
+        PP.src = "SQlose.png";
+        CP.src = "WQwin.png";
+    }
+}

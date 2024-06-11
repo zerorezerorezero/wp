@@ -45,7 +45,7 @@
 * [按鈕移動](https://github.com/zerorezerorezero/wp/blob/master/javascript/HW5/BM.html)
 ---
 ### 作業6 側欄 -- CSS Transition 與 JavaScript
-參考W3school的教材自己做的。
+參考老師給的W3school的教材自己做的。
 1.CSS
 * [網頁](https://zerorezerorezero.github.io/wp/javascript/HW6/CSSTrans.html)
 * [原始碼](https://github.com/zerorezerorezero/wp/blob/master/javascript/HW6/CSSTrans.html)
