@@ -1,2 +1,2 @@
 # 關於本作業
-html基本上是自己打的，排版參考自W3School，看到ChatGPT給的架構後，有小修改巢狀結構。上排的"聽歌嗎"按鈕按下去的選單是自己的想法，問了ChatGPT和老師解決了BUG。css主要參考自W3School還有ChatGPT進行debug。js則是直接複製自ChatGPT。
+html基本上是自己打的，排版參考自W3School，看到ChatGPT給的架構後，有小修改巢狀結構。上排的"聽V歌手嗎"按鈕按下去的選單是自己的想法，問了ChatGPT和老師解決了BUG。css主要參考自W3School還有ChatGPT進行debug。js則是直接複製自ChatGPT。
