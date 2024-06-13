@@ -66,7 +66,6 @@ function reset(){ // Reset everything
 }
 
 function R(){ // Show result
-
     switch (button){ // Distinguish witch button was clicked
         case "Scissors":
             PLR=0; break;
@@ -100,15 +99,16 @@ function R(){ // Show result
     BP.disabled=false;
     BReset.disabled=false;
 
-    if(Pscore==goal||Cscore==goal){
-        BS.disabled = true;
-        BR.disabled = true;
-        BP.disabled = true;
+    if(Pscore==goal||Cscore==goal){ //Game over
+        BS.disabled=true;
+        BR.disabled=true;
+        BP.disabled=true;
+        BReset.disabled=true;
         setTimeout(judge,3000);
     }
 }
 
-function judge() {
+function judge() { //Show final result
     if (Pscore > Cscore) {
         title.innerText = "你贏了!";
         PP.src = "SQwin.png";
@@ -119,4 +119,5 @@ function judge() {
         PP.src = "SQlose.png";
         CP.src = "WQwin.png";
     }
+    BReset.disabled=false;
 }
