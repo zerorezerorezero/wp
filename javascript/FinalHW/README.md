@@ -82,4 +82,4 @@ css主要參考自W3School還有ChatGPT進行debug。js則是直接複製自Chat
 
 ---
 ### 作業11 閱讀 denoApiService + Blog 的程式碼，並寫下理解然後為程式碼加上詳細的註解
-目前僅寫了少數幾行註解，尚未完成與繳交。
+以目前自己的理解寫的註解，僅做了blog裡的[html](https://github.com/zerorezerorezero/wp/blob/master/javascript/HW11/denoApiService/blog/index.html)和[javascript](https://github.com/zerorezerorezero/wp/blob/master/javascript/HW11/denoApiService/blog/main.js)的部分。
